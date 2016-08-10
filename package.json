@@ -1,0 +1,11 @@
+{
+  "name": "connect",
+  "description": "A simple 2 player connect-4 game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.9.8"
+  }
+}
