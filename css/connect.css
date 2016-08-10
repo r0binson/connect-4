@@ -1,0 +1,84 @@
+body {
+  background: black;
+}
+.main {
+  background: lightgray;
+  margin-top: 30px;
+  min-height: 70vh;
+  max-width: 700px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header {
+  text-align: center;
+  border: solid 1px white;
+  height: 65px;
+  line-height: 65px;
+  background: white;
+}
+.board {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 636px;
+  margin: 20px auto;
+}
+.gameOn {
+  background: #fff;
+}
+.gameOver {
+  background: lightGray;
+}
+.message {
+  margin: 10px auto;
+  width: 636px;
+  height: 50px;
+  line-height: 50px;
+  border: solid 0.5px;
+  font-size: 1.5em;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+.playerTurn {
+  color: #FFF;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  background: plum;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.myRow {
+  margin-top: auto;
+}
+.columnBorder {
+  border: solid 0.5px;
+  height: 50px;
+  line-height: 50px;
+}
+.playerA {
+  background: red;
+  color: #FFF;
+}
+.playerB {
+  background: blue;
+  color: #FFF;
+}
+.playerX {
+  background: lightGray;
+}
+.box {
+  border: solid 1px;
+  padding: 5px;
+  line-height: 90px;
+  height: 90px;
+  width: 90px;
+}
+.chips {
+  border-radius: 40px;
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+}

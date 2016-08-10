@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="connect">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect</title>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+  <!--integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="css/bootstrap-3.3.6-dist/css/bootstrap.css">
+  <link href="css/connect.css" rel="stylesheet" type="text/css"/>
+
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="css/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+  <script src="js/angular.min.js"></script>
+  <script src="js/connect.js"></script>
+</head>
+<body ng-controller="mainController">
+<div class="container main">
+  <div class="header">
+    <h3>Connect - 4</h3>
+  </div>
+  <div class="container playerTurn">
+    <div class="row">
+      <div class="col-xs-6" ng-class="{'playerA': 'A'== playerTurn}" ng-bind="player1"></div>
+      <div class="col-xs-6" ng-class="{'playerB': 'B'== playerTurn}" ng-bind="player2"></div>
+    </div>
+  </div>
+  <div class="board"
+       ng-class="{'gameOn': !gameHasEnded, 'gameOver': gameHasEnded}">
+    <table class="tableBoard">
+      <tr ng-repeat="gameRow in gameRows">
+        <td class="box" ng-repeat="displayColumn in displayColumns" ng-click="clickColumn($index)">
+          <div class="chips"
+               ng-class="{'playerA': 'A'== displayColumn[gameRow], 'playerB': 'B'== displayColumn[gameRow]}"
+               ng-bind="displayColumn[gameRow]">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="message" ng-bind="message">
+  </div><!-- message -->
+</div> <!-- main -->
+</body>
+</html>
