@@ -30,7 +30,7 @@ connect.controller('mainController', ['$scope', '$timeout',
     //TODO: Refactor to change the globalVariables on a different function
     function playerMove(displayColumn, column, player) {
       if (isColumnFilled(column.length)) {
-        alert("Invalid Move");
+        scope.message = "Invalid Move.";
         return;
       }
       displayColumn[column.length] = player;
@@ -39,15 +39,11 @@ connect.controller('mainController', ['$scope', '$timeout',
       if (isMoveAWin(column)) {
         scope.gameHasEnded = true;
         $timeout(function () {
-          //alert('Congratulations Player:' + scope.playerTurn);
           scope.message = 'Player ' + scope.playerTurn + ' wins!'
         }, one_second);
-
         return;
-      }
-      ;
+      };
       scope.playerTurn = setPlayerTurnToOpponent(scope.playerTurn);
-
     }
 
     function isMoveAWin(column) {
@@ -57,22 +53,18 @@ connect.controller('mainController', ['$scope', '$timeout',
       }
 
       if (verticalPatternWin(column)) {
-        console.log('Vertical Pattern');
         return true;
       }
 
       if (horizontalPatternWin(column)) {
-        console.log('horizontal Pattern');
         return true;
       }
 
       if (rightDiagonalPatternWin(column)) {
-        console.log('rightDiagonal Pattern');
         return true;
       }
 
       if (leftDiagonalPatternWin(column)) {
-        console.log('leftDiagonal Pattern');
         return true;
       }
 

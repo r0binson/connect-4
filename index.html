@@ -27,7 +27,7 @@
   </div>
   <div class="board"
        ng-class="{'gameOn': !gameHasEnded, 'gameOver': gameHasEnded}">
-    <table class="tableBoard">
+    <table>
       <tr ng-repeat="gameRow in gameRows">
         <td class="box" ng-repeat="displayColumn in displayColumns" ng-click="clickColumn($index)">
           <div class="chips"
